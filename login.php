@@ -1,8 +1,9 @@
 <?php
     require_once('config.php');
     //データベースへ接続、テーブルがない場合は作成
+
     try {
-    $pdo = new PDO(DSN, DB_USER, DB_PASS);
+    $pdo = new PDO("mysql:host=localhost; dbname=quiztool", "root", "12345");
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $pdo->exec("create table if not exists userDeta(
         id int not null auto_increment primary key,
@@ -13,8 +14,9 @@
     } catch (Exception $e) {
     echo $e->getMessage() . PHP_EOL;
     }
+
     //POSTのValidate。
-    if (!$email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+    if (!$email = filter_var($_POST['user_id'], FILTER_VALIDATE_EMAIL)) {
     echo '入力された値が不正です。';
     return false;
     }

@@ -1,8 +1,12 @@
-/*
-HTML全体に適用できる変数を記述
---変数名: ;
-var(変数名)で呼び出す
-*/
+/*===================================================
+
+  ～関数～
+  ・:root{}の中にHTML全体に適用できる変数を記述する
+    --変数名: ○○○○;
+
+  ・var(変数名)で値を呼び出せる
+
+=====================================================*/
 :root{
   /*背景で使うメインカラー*/
   --Primary: #EC8C1F;
@@ -16,6 +20,9 @@ var(変数名)で呼び出す
   /*今すぐ始めるボタン*/
   --startnow: #2A416A;
 
+  /*ボタンの影の色*/
+  --shadow: rgba(0, 0, 0, 0.25);
+
   /*黒文字*/
   --Black: #432821;
 
@@ -25,7 +32,7 @@ var(変数名)で呼び出す
   /*白*/
   --White: #FFFFFF;
 
-  /*確定ボタン*/
+  /*確定ボタン（青色）*/
   --Secondary: #2A416A;
 
 
@@ -43,38 +50,50 @@ var(変数名)で呼び出す
   --timer: #E6362B;
 
 }
+/*============================================
+
+  関数指定ここまで
+
+==============================================*/
+
 
 h1{
   color: white;
   padding-top: 50px;
   padding-bottom: 60px;
-  font-size: 60px;
-  
-  
-  
-  
+  font-size: 50px;
+}
+
+h2{
+  color: white;
+}
+
+p{
+  color: white;
+}
+.main{
+  margin:50px auto;
+  margin-top:0;
 }
 .box{
-  padding: 0.20em 1em;
-  padding-bottom: 60px;
-    margin: 2em 0;
-    max-width: 1030px;
-    min-width: 400px;
-    font-weight: bold;
-    border: solid 3px white;/*線*/
-    border-radius: 10px;/*角の丸み*/
-    position: absolute;
-    left: 130px;
-    right: 130px;
-    top: 130px;
-    bottom: auto;
-    margin: 0 auto;
-    overflow: hidden;
-    position: fixed;
-    left: 100px;
-    min-height: 450px;
-   
-    
+  padding: 10% 10%;
+  padding-bottom: 10%px;
+  margin: 2em 2em;
+  max-width: 1030px;
+  min-width: 560px;
+  font-weight: bold;
+  border: solid 3px white;/*線*/
+  border-radius: 10px;/*角の丸み*/
+  position: absolute;
+  left: 130px;
+  right: 130px;
+  top: 130px;
+  bottom: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  position: fixed;
+  
+  /*min-height: 450px; */
     
 }
 .header{
@@ -91,10 +110,17 @@ body{
   background-color: #EC8C1F;
   width: 100%;
   text-align: center;
-  height: 100%;
-  min-height: 300px;
+  /*height: 100%;*/
+  /*min-height: 300px;*/
   
 }
+/*----------PC表示の場合-----------*/
+@media screen and (min-width: 560px){ 
+/*================================================
+
+  新規登録ボタン
+
+=================================================*/
 .signupbutton{
 	display: inline-block;
   text-decoration: none;
@@ -108,10 +134,24 @@ body{
   font-weight: bold;
   overflow: hidden;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-  border-bottom: solid 3px #bd6565;
+  border-bottom: solid 3px var(--signup);
   transition: .4s;
   margin: 10px 5px;
 }
+/*
+  ボタンを押したとき
+----------------------------------------------*/
+.signupbutton:active {
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  border-bottom: none;
+}
+/*=================================================
+
+  ログインボタン
+
+=================================================*/
 .loginbutton{
   display: inline-block;
   text-decoration: none;
@@ -125,10 +165,25 @@ body{
   font-weight: bold;
   overflow: hidden;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-  border-bottom: solid 3px #bd6565;
+  border-bottom: solid 3px var(--login);
   transition: .4s;
   margin: 10px 5px;
 }
+/*
+  ボタンを押したとき
+----------------------------------------------*/
+.loginbutton:active {
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  border-bottom: none;
+}
+
+/*===============================================
+
+  今すぐ始めるボタン
+
+=================================================*/
 .startnowbutton{
   display: inline-block;
   text-decoration: none;
@@ -142,12 +197,20 @@ body{
   font-weight: bold;
   overflow: hidden;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
-  border-bottom: solid 3px #bd6565;
+  border-bottom: solid 3px var(--startnow);
   transition: .4s;
   margin: 10px 5px;
 }
-
+/*
+  ボタンを押したとき
+----------------------------------------------*/
+.startnowbutton:active {
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  border-bottom: none;
 }
+
 .selectbutton{
 	display: flex;
 	justify-content: space-between;
@@ -155,3 +218,271 @@ body{
 .footer{
 	width: 100%
 }
+}
+
+/*-------------------------------------------
+
+  ハンバーガーメニューここから
+
+--------------------------------------------*/
+ul { list-style: none; }
+
+a { text-decoration: none; color: black;}
+
+#menu-wrapper {
+    overflow: hidden;
+    max-width: 100%;
+    cursor: pointer;
+}
+
+
+
+#menu-wrapper #hamburger-menu {
+  position: relative;
+  width: 25px;
+  height: 20px;
+  margin: 15px;
+}
+#menu-wrapper #hamburger-menu span {
+  opacity: 1;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-radius: 10px;
+  color: black;
+  background-color: white;
+  position: absolute;
+  transform: rotate(0deg);
+  transition: .4s ease-in-out;
+}
+
+#menu-wrapper #hamburger-menu span:nth-child(1) {
+  top: 0;
+}
+#menu-wrapper #hamburger-menu span:nth-child(2) {
+  top: 9px;
+}
+#menu-wrapper #hamburger-menu span:nth-child(3) {
+  top: 18px;
+}
+#menu-wrapper #hamburger-menu.open span:nth-child(1) {
+  transform: translateY(9px) rotate(135deg);
+}
+#menu-wrapper #hamburger-menu.open span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+#menu-wrapper #hamburger-menu.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-135deg);
+}
+
+#menu-container .menu-list .menu-submenu {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#menu-container .menu-list {
+  padding-left: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  max-width: 450px;
+  background: white;
+  box-shadow: rgba(100,100,100,0.2) 6px 2px 10px;
+  z-index: 999;
+  overflow-y: auto;
+  overflow-x: hidden;
+  left: -100%;
+}
+
+#menu-container .menu-list li.accordion-toggle, #menu-container .menu-list .menu-login {
+  font-size: 16px;
+  padding: 20px;
+  text-transform: uppercase;
+  border-top: 1px solid #dbdcd2;
+}
+#menu-container .menu-list li:first-of-type {
+  border-top: 0;
+}
+
+.accordion-toggle, .accordion-content {
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+.accordion-content {
+  display: none;
+}
+
+.accordion-toggle a:before, .accordion-toggle a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  width: 15px;
+  height: 2px;
+  margin-top: -1px;
+  background-color: #5a5858;
+  transform-origin: 50% 50%;
+  transition: all 0.3s ease-out;
+}
+
+.accordion-toggle a:before {
+  transform: rotate(-90deg);
+  opacity: 1;
+  z-index: 2;
+}
+
+.accordion-toggle.active-tab {
+background: yellowgreen;
+transition: all 0.3s ease;
+}
+.accordion-toggle a.active:before {
+  transform: rotate(0deg);
+  background: #fff !important;
+}
+
+.accordion-toggle a.active:after {
+  transform: rotate(180deg);
+  background: #fff !important;
+  opacity: 0;
+}
+/*-------------------------------------------
+
+  ハンバーガーメニューここまで
+
+--------------------------------------------*/
+
+
+/* ------------------------------------------
+  レスポンシブデザイン ここから
+  スマホ表示の場合
+--------------------------------------------*/
+
+@media screen and (max-width: 559px){ 
+.main{
+  margin:50px auto;
+  margin-top:0;
+}
+h1{
+  font-size: 25px;
+}
+
+.box{
+  padding: auto;
+  padding-bottom: auto;
+  margin: 2% 2%;
+  max-width: 100%;
+  min-width: 75%;
+  font-weight: auto;
+  max-height: auto;
+  min-height: auto;
+  border: solid 3px white;/*線*/
+  border-radius: 10px;/*角の丸み*/
+  position: auto;
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: auto;
+  overflow: auto;
+  position: auto;
+  left: auto;
+   
+}
+.h1{
+  font-size: 30px;
+}
+
+/*===========================================
+
+  ボタン全体の指定
+
+===========================================*/
+.buttons{
+  display: flex;/*縦並びにする*/
+  flex-direction: column;
+}
+
+/*===========================================
+
+  新規登録ボタン
+
+============================================*/
+.signupbutton{
+  padding: 12px;
+  text-decoration: none;
+  background: var(--signup);/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px var(--shadow);
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+.signupbutton:active {
+
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  border-bottom: none;
+}
+
+/*===========================================
+
+  ログインボタン
+  
+=============================================*/
+.loginbutton{
+  padding: 12px;
+  text-decoration: none;
+  background: var(--login);/*ボタン色*/
+  color: var(--Black);
+  
+  border-bottom: solid 4px var(--shadow);
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+.loginbutton:active {
+  /*
+    ボタンを押したとき
+  ---------------------------------------*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  border-bottom: none;
+}
+
+/*========================================
+
+  今すぐ始めるボタン
+  
+=========================================*/
+.startnowbutton{
+  padding: 12px;
+  text-decoration: none;
+  background: var(--startnow);/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px var(--shadow);
+  border-radius: 3px;
+  margin-bottom: 10px;
+
+}
+.startnowbutton:active {
+  /*
+    ボタンを押したとき
+  ----------------------------------------*/
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);/*影を小さく*/
+  border-bottom: none;
+}
+
+
+}
+/*------------------------------------------
+
+  レスポンシブデザインここまで
+  スマホ表示の場合
+
+-------------------------------------------*/
