@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head class="header">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+        <title>ルーム作成</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="wrapper">
+        <main class="main">
+        <div class="box">
+            <h1>ルーム作成</h1>
+                <form action="newroom.php" method="POST">
+                    <label for="name">ルーム名</label>
+                    <input type="text" id="name" name="name"></br>
+                    <label for="rule">ルール</label></br>
+                    <!--ここにルール選択チェックボックスやラジオボタンなどを配置-->
+                    <label for="description">説明文</label>
+                    <textarea id="description" name="description"></textarea></br>
+                    <input type="submit" value="作成する">
+                </form>
+        </div>
+        </main>
+        </div>
+    </body>
+</html>

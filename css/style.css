@@ -1,0 +1,157 @@
+/*
+HTML全体に適用できる変数を記述
+--変数名: ;
+var(変数名)で呼び出す
+*/
+:root{
+  /*背景で使うメインカラー*/
+  --Primary: #EC8C1F;
+
+  /*新規登録ボタン*/
+  --signup: #5B514F;
+  
+  /*ログインボタン*/
+  --login: #FFFFFF;
+
+  /*今すぐ始めるボタン*/
+  --startnow: #2A416A;
+
+  /*黒文字*/
+  --Black: #432821;
+
+  /*黒ボタン*/
+  --DarkGray: #5B514F;
+
+  /*白*/
+  --White: #FFFFFF;
+
+  /*確定ボタン*/
+  --Secondary: #2A416A;
+
+
+  /*問題選択肢の色*/
+  --first: #2A416A;
+  --second: #E24725;
+  --third: #277C3F;
+  --fourth: #F6D561;
+  
+  --A: #2A416A;
+  --B: #E24725;
+  --C: #277C3F;
+
+  /*タイマーの色*/
+  --timer: #E6362B;
+
+}
+
+h1{
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 60px;
+  font-size: 60px;
+  
+  
+  
+  
+}
+.box{
+  padding: 0.20em 1em;
+  padding-bottom: 60px;
+    margin: 2em 0;
+    max-width: 1030px;
+    min-width: 400px;
+    font-weight: bold;
+    border: solid 3px white;/*線*/
+    border-radius: 10px;/*角の丸み*/
+    position: absolute;
+    left: 130px;
+    right: 130px;
+    top: 130px;
+    bottom: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    position: fixed;
+    left: 100px;
+    min-height: 450px;
+   
+    
+    
+}
+.header{
+	width: 100%
+}
+.wrapper{
+	width: 970px;
+  margin: 30px auto 40px;
+
+  max-width: 960px;
+}
+body{
+  margin: 0 0 0 0;
+  background-color: #EC8C1F;
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  min-height: 300px;
+  
+}
+.signupbutton{
+	display: inline-block;
+  text-decoration: none;
+  background:var(--signup);
+  color: #FFF;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  overflow: hidden;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #bd6565;
+  transition: .4s;
+  margin: 10px 5px;
+}
+.loginbutton{
+  display: inline-block;
+  text-decoration: none;
+  background:var(--login);
+  color: var(--Black);
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  overflow: hidden;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #bd6565;
+  transition: .4s;
+  margin: 10px 5px;
+}
+.startnowbutton{
+  display: inline-block;
+  text-decoration: none;
+  background:var(--startnow);
+  color: #FFF;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  overflow: hidden;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #bd6565;
+  transition: .4s;
+  margin: 10px 5px;
+}
+
+}
+.selectbutton{
+	display: flex;
+	justify-content: space-between;
+}
+.footer{
+	width: 100%
+}
