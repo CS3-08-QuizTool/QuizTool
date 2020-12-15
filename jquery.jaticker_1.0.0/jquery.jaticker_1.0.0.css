@@ -1,0 +1,68 @@
+/*
+ * jQuery jaTicker ver 1.0.0
+ * Copyright (c) 2011 Otchy
+ * This source file is subject to the MIT license.
+ * http://www.otchy.net
+ */
+ /*
+
+・:root{}の中にHTML全体に適用できる変数を記述する
+  --変数名: ○○○○;
+
+・var(変数名)で呼び出せる
+
+*/
+:root{
+	/*背景で使うメインカラー*/
+	--Primary: #EC8C1F;
+  
+	/*新規登録ボタン*/
+	--signup: #5B514F;
+	
+	/*ログインボタン*/
+	--login: #FFFFFF;
+  
+	/*今すぐ始めるボタン*/
+	--startnow: #2A416A;
+  
+	/*黒文字*/
+	--Black: #432821;
+  
+	/*黒ボタン*/
+	--DarkGray: #5B514F;
+  
+	/*白*/
+	--White: #FFFFFF;
+  
+	/*クイズ黒ボックス*/
+	--QuizBlack: #231512;
+  
+	/*確定ボタン（青色）*/
+	--Secondary: #2A416A;
+  
+  
+	/*問題選択肢の色*/
+	--first: #2A416A;
+	--second: #E24725;
+	--third: #277C3F;
+	--fourth: #F6D561;
+	
+	--A: #2A416A;
+	--B: #E24725;
+	--C: #277C3F;
+  
+	/*タイマーの色*/
+	--timer: #E6362B;
+  
+  }
+.jaticker-cursor {
+	font-weight: bold;
+}
+.jaticker-input {
+	color: var(--startnow);
+	text-decoration: underline;
+}
+.jaticker-convert {
+	color: black;
+	background-color: var(--Black);
+}

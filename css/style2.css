@@ -1,0 +1,386 @@
+/*
+
+・:root{}の中にHTML全体に適用できる変数を記述する
+  --変数名: ○○○○;
+
+・var(変数名)で呼び出せる
+
+*/
+:root{
+  /*背景で使うメインカラー*/
+  --Primary: #EC8C1F;
+
+  /*新規登録ボタン*/
+  --signup: #5B514F;
+  
+  /*ログインボタン*/
+  --login: #FFFFFF;
+
+  /*今すぐ始めるボタン*/
+  --startnow: #2A416A;
+
+  /*黒文字*/
+  --Black: #432821;
+
+  /*黒ボタン*/
+  --DarkGray: #5B514F;
+
+  /*白*/
+  --White: #FFFFFF;
+
+  /*確定ボタン（青色）*/
+  --Secondary: #2A416A;
+
+
+  /*問題選択肢の色*/
+  --first: #2A416A;
+  --second: #E24725;
+  --third: #277C3F;
+  --fourth: #F6D561;
+  
+  --A: #2A416A;
+  --B: #E24725;
+  --C: #277C3F;
+
+  /*タイマーの色*/
+  --timer: #E6362B;
+
+}
+
+main{
+  width: 100%;
+  height: 100%;
+}
+.header{
+	width: 100%
+}
+.wrapper{
+	width: 970px;
+  margin: 30px auto 40px;
+  max-width: 960px;
+}
+body{
+  margin: 0 0 0 0;
+  background-color: #EC8C1F;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  
+}
+h1{
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 60px;
+  font-size: 60px;
+}
+
+h2{
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 60px;
+  font-size: 40px;
+
+}
+h3{/*余白なし　大きめ文章*/
+  color: white;
+  font-size: 30px;
+}
+
+
+p{
+  color: white;
+ 
+}
+
+.box{
+  padding: 0.20em 1em;
+  padding-bottom: 60px;
+  margin: 2em 0;
+  max-width: 1030px;
+  min-width: 400px;
+  font-weight: bold;
+  border: solid 3px white;/*線*/
+  border-radius: 10px;/*角の丸み*/
+  position: absolute;
+  left: 130px;
+  right: 130px;
+  top: 130px;
+  bottom: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  position: fixed;
+  left: 100px;
+  min-height: 450px;
+
+}
+.header{
+	width: 100%
+}
+.wrapper{
+	width: 970px;
+  margin: 30px auto 40px;
+
+  max-width: 960px;
+}
+body{
+  margin: 0 0 0 0;
+  background-color: #EC8C1F;
+  width: 100%;
+ 
+  height: 100%;
+  min-height: 300px;
+  
+}
+@media screen and (min-width: 560px){ 
+/*新規登録ボタンはstyle.cssを見てね！*/
+
+/*ログインボタンはstyle.cssを見てね！*/
+
+/*今すぐ始めるボタンはstyle.cssを見てね！*/
+
+
+
+.selectbutton{
+	display: flex;
+	justify-content: space-between;
+}
+.footer{
+	width: 100%
+}
+
+
+
+  /*問題文表示はstyle.cssを見てね！*/
+
+
+
+ 
+/*問題文＆選択肢はstyle.cssを見てね！*/
+.container{
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 2%;
+  max-height: 800px;
+}
+.rankbox{
+  margin: 0 8%;
+  margin-left: 9%;
+  height: 80%;
+}
+.ranktitle{
+  width: 15%;
+  min-width: 180px;
+  max-width: 220px;
+  min-height: 700px;
+  max-height: 900px;
+  height: 90%;
+  background: var(--Black);
+  border-radius: 10px;
+  float: right;
+  position: relative;
+  bottom: 0px;
+  /*right: 8%;*/
+  text-align: center;
+}
+.ranktitle span{
+  height: 85%;
+
+  color: var(--White);
+  text-align: center;
+  writing-mode: vertical-rl;
+  font-size: 4.5em;
+  letter-spacing: 10px;
+}
+#rank_btn_stop{
+  float: right;
+  right: 8%;
+}
+#rank_btn{
+  float: right;
+  right: 8%;
+}
+#back_room{
+  float: right;
+  right: 8%;
+}
+/*通常ボタン*/
+/*四角くてグレーのボタン*/
+.basicbutton {
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #FFF;
+  background: var(--DarkGray);/*背景色*/
+  border-bottom: solid 2px #231707;/*少し濃い目の色に*/
+  border-radius: 4px;/*角の丸み*/
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  font-weight: bold;
+  padding: 0.5em 1em;
+  margin: 5px 5px;
+}
+/*
+通常ボタン押したとき
+--------------------------------------*/
+.basicbutton:active {
+  border-bottom: solid 2px var(--DarkGray);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+.rank{
+  display: list-item;
+  list-style-type: decimal;
+  width: 75%;
+  height: 80%;
+  max-width: 1500px;
+  max-height: 800px;
+
+  color: var(--White);
+  list-style-type:none;
+}
+
+.rank ol{
+  position: relative;
+}
+.rank li{
+  font-size: x-large;
+  position: relative;
+  left: 35px;
+}
+.rank ol{
+  width: 100%;
+}
+.one{
+  padding: 1em 1em;
+  margin: 0.3em 0;
+  font-weight: bold;
+  color:var(--White);/*文字色*/
+  background:black;
+  border: solid 3px black;/*線*/
+  border-radius: 10px;/*角の丸み*/
+  width: 100%;
+  display: block;
+  position: relative;
+  bottom: 10px;
+}
+.two{
+  padding: 1em 1em;
+  margin: 0.3em 0;
+  font-weight: bold;
+  color:var(--White);/*文字色*/
+  background:black;
+  border: solid 3px black;/*線*/
+  border-radius: 10px;/*角の丸み*/
+  width: 100%;
+  position: relative;
+  bottom: 10px;
+
+}
+.theee{
+  padding: 1em 1em;
+  margin: 0.3em 0;
+  font-weight: bold;
+  color:var(--White);/*文字色*/
+  background:black;
+  border: solid 3px black;/*線*/
+  border-radius: 10px;/*角の丸み*/
+  width: 100%;
+  position: relative;
+  bottom: 10px;
+}
+.four{
+  padding: 1em 1em;
+  margin: 0.3em 0;
+  font-weight: bold;
+  color:var(--White);/*文字色*/
+  background:black;
+  border: solid 3px black;/*線*/
+  border-radius: 10px;/*角の丸み*/
+  width: 100%;
+  position: relative;
+  bottom: 10px;
+}
+.five{
+  padding: 1em 1em;
+  margin: 0.3em 0;
+  font-weight: bold;
+  color:var(--White);/*文字色*/
+  background:black;
+  border: solid 3px black;/*線*/
+  border-radius: 10px;/*角の丸み*/
+  width: 100%;
+  position: relative;
+  bottom: 10px;
+}
+.six{
+  padding: 1em 1em;
+  margin: 0.3em 0;
+  font-weight: bold;
+  color:var(--White);/*文字色*/
+  background:black;
+  border: solid 3px black;/*線*/
+  border-radius: 10px;/*角の丸み*/
+  width: 100%;
+  position: relative;
+  bottom: 10px;
+}
+.seven{
+  padding: 1em 1em;
+  margin: 0.3em 0;
+  font-weight: bold;
+  color:var(--White);/*文字色*/
+  background:black;
+  border: solid 3px black;/*線*/
+  border-radius: 10px;/*角の丸み*/
+  width: 100%;
+  position: relative;
+  bottom: 10px;
+}
+.eight{
+  padding: 1em 1em;
+  margin: 0.3em 0;
+  font-weight: bold;
+  color:var(--White);/*文字色*/
+  background:black;
+  border: solid 3px black;/*線*/
+  border-radius: 10px;/*角の丸み*/
+  width: 100%;
+  position: relative;
+  bottom: 10px;
+}
+.nine{
+  padding: 1em 1em;
+  margin: 0.3em 0;
+  font-weight: bold;
+  color:var(--White);/*文字色*/
+  background:black;
+  border: solid 3px black;/*線*/
+  border-radius: 10px;/*角の丸み*/
+  width: 100%;
+  position: relative;
+  bottom: 10px;
+}
+.ten{
+  padding: 1em 1em;
+  margin: 0.3em 0;
+  font-weight: bold;
+  color:var(--White);/*文字色*/
+  background:black;
+  border: solid 3px black;/*線*/
+  border-radius: 10px;/*角の丸み*/
+  width: 100%;
+  position: relative;
+  bottom: 10px;
+}
+
+}
+
+
+  
+
+
+
+
+
+
+
+

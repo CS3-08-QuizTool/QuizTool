@@ -1,12 +1,3 @@
-$(document).ready(function () {
-  hsize = $(window).height();
-  $("section").css("height", hsize + "px");
-});
-$(window).resize(function () {
-  hsize = $(window).height();
-  $("section").css("height", hsize + "px");
-});
-
 $(function() {
   function slideMenu() {
     var activeState = $("#menu-container .menu-list").hasClass("active");
@@ -28,5 +19,20 @@ $(function() {
     $(".menu-list .accordion-content").not($(this).next()).slideUp("fast").removeClass("open");
     $(".menu-list .accordion-toggle").not(jQuery(this)).removeClass("active-tab").find(".menu-link").removeClass("active");
   });
-  
+  function timer(){
+    var setTime = 20;
+    var second = 0;
+    $('.circle').addClass('pie');
+    $('.circle').css({'animation': 'pie '+ setTime*2 +'s linear'})
+        var timerId = setInterval(function() {
+            second += 1;
+            if(second >= setTime){
+                clearInterval(timerId);
+            }
+            countTime = setTime - second;
+            $('.minute').text(countTime % 3600 / 60 | 0);
+            $('.second').text(countTime % 60);
+        }, 1000);
+}
+timer();
 }); // jQuery load

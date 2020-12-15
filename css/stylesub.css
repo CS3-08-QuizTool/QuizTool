@@ -1,0 +1,479 @@
+/*
+
+・:root{}の中にHTML全体に適用できる変数を記述する
+  --変数名: ○○○○;
+
+・var(変数名)で呼び出せる
+
+*/
+:root{
+  /*背景で使うメインカラー*/
+  --Primary: #EC8C1F;
+
+  /*新規登録ボタン*/
+  --signup: #5B514F;
+  
+  /*ログインボタン*/
+  --login: #FFFFFF;
+
+  /*今すぐ始めるボタン*/
+  --startnow: #2A416A;
+
+  /*黒文字*/
+  --Black: #432821;
+
+  /*黒ボタン*/
+  --DarkGray: #5B514F;
+
+  /*白*/
+  --White: #FFFFFF;
+
+  /*確定ボタン（青色）*/
+  --Submit: #2A416A;
+
+  /*ルームクイズ「開始」ボタン*/
+  --Go: #277C3F;
+
+  /*問題選択肢の色*/
+  --first: #2A416A;
+  --second: #E24725;
+  --third: #277C3F;
+  --fourth: #F6D561;
+  
+  --A: #2A416A;
+  --B: #E24725;
+  --C: #277C3F;
+
+  /*タイマーの色*/
+  --timer: #E6362B;
+
+}
+body{
+  margin: 0 0 0 0;
+  background-color: #EC8C1F;
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  min-height: 300px;
+  
+}
+.box{
+  display: inline-block;
+  padding: 0.2em 2em;
+  padding-bottom: 70px;
+    margin: 2em 0;
+    max-width: 1030px;
+    min-width: 1000px;
+    font-weight: bold;
+    border: solid 3px white;/*線*/
+    border-radius: 10px;/*角の丸み*/
+    left: 130px;
+    right: 130px;
+    top: 130px;
+    bottom: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    position: fixed;
+    left: 100px;
+   min-height: 520px;
+   
+    
+    
+}
+h2{
+  color: white;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  font-size: 50px;
+}
+/*ハンバーガーメニューここから*/
+ul { list-style: none; }
+
+a { text-decoration: none; color: black;}
+
+#menu-wrapper {
+    overflow: hidden;
+    max-width: 100%;
+    cursor: pointer;
+}
+
+#menu-wrapper {
+  overflow: hidden;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+#menu-wrapper #hamburger-menu {
+  position: relative;
+  width: 25px;
+  height: 20px;
+  margin: 15px;
+}
+#menu-wrapper #hamburger-menu span {
+  opacity: 1;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  border-radius: 10px;
+  color:black;
+  background-color: white;
+  position: absolute;
+  transform: rotate(0deg);
+  transition: .4s ease-in-out;
+}
+
+#menu-wrapper #hamburger-menu span:nth-child(1) {
+  top: 0;
+}
+#menu-wrapper #hamburger-menu span:nth-child(2) {
+  top: 9px;
+}
+#menu-wrapper #hamburger-menu span:nth-child(3) {
+  top: 18px;
+}
+#menu-wrapper #hamburger-menu.open span:nth-child(1) {
+  transform: translateY(9px) rotate(135deg);
+}
+#menu-wrapper #hamburger-menu.open span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-60px);
+}
+#menu-wrapper #hamburger-menu.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-135deg);
+}
+
+#menu-container .menu-list .menu-submenu {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#menu-container .menu-list {
+  padding-left: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  max-width: 450px;
+  background:white;
+  box-shadow: rgba(100,100,100,0.2) 6px 2px 10px;
+  z-index: 999;
+  overflow-y: auto;
+  overflow-x: hidden;
+  left: -100%;
+  color: white;
+}
+
+#menu-container .menu-list li.accordion-toggle, #menu-container .menu-list .menu-login {
+  font-size: 16px;
+  padding: 20px;
+  text-transform: uppercase;
+  border-top: 1px solid #dbdcd2;
+}
+#menu-container .menu-list li:first-of-type {
+  border-top: 0;
+}
+
+.accordion-toggle, .accordion-content {
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  letter-spacing: 1px;
+}
+
+.accordion-content {
+  display: none;
+  
+}
+
+.accordion-toggle a:before, .accordion-toggle a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  width: 15px;
+  height: 2px;
+  margin-top: -1px;
+  background-color: #5a5858;
+  transform-origin: 50% 50%;
+  transition: all 0.3s ease-out;
+}
+
+.accordion-toggle a:before {
+  transform: rotate(-90deg);
+  opacity: 1;
+  z-index: 2;
+}
+
+.accordion-toggle.active-tab {
+background: var(--DarkGray);
+transition: all 0.3s ease;
+}
+.accordion-toggle a.active:before {
+  transform: rotate(0deg);
+  background: #fff !important;
+}
+
+.accordion-toggle a.active:after {
+  transform: rotate(180deg);
+  background: #fff !important;
+  opacity: 0;
+}
+
+/*ハンバーガーメニューここまで*/
+h3{
+  color: white;
+  font-size: xx-large;
+}
+.subbox{  
+  width: 680px;
+  height: 297px;
+  border: solid 3px white;/*線*/
+  position: relative;
+  left: 180px;
+  bottom: 60px;
+  min-width: 500px;
+}
+.pass{
+  color: var(--White);
+  position: relative;
+  top: 10px;
+  font-size: x-large;
+}
+.btn-square-pop {
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 3em;
+  text-decoration: none;
+  color: #FFF;
+  background:var(--Black);/*背景色*/
+  border: solid 2px white;/*少し濃い目の色に*/
+  border-radius: 4px;/*角の丸み*/
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  font-weight: bold;
+  top: 70px;
+  right: 70px;
+}
+
+.btn-square-pop:active {
+  border-bottom: solid 2px #fd9535;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+.btn-square-pop-d{
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 3em;
+  text-decoration: none;
+  color: #FFF;
+  background:red;/*背景色*/
+  border: solid 2px red;/*少し濃い目の色に*/
+  border-radius: 4px;/*角の丸み*/
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  font-weight: bold;
+  top: 70px;
+  left: 50px;
+}
+.btn-square-pop-d:active {
+  border-bottom: solid 2px #fd9535;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+.okbutton {
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 3em;
+  text-decoration: none;
+  color: #FFF;
+  background: var(--Black);/*背景色*/
+  border-bottom: solid 2px #d27d00;/*少し濃い目の色に*/
+  border-radius: 4px;/*角の丸み*/
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  font-weight: bold;
+  position: relative;
+  top: 50px;
+}
+
+.okbutton:active {
+  border-bottom: solid 2px #fd9535;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+.topbutton{
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 3em;
+  text-decoration: none;
+  color: var(--White);
+  background: var(--Black);/*背景色*/
+  border-bottom: solid 2px #d27d00;/*少し濃い目の色に*/
+  border-radius: 4px;/*角の丸み*/
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  font-weight: bold;
+  position: relative;
+  top: 100px;
+}
+.topbutton:active {
+  border-bottom: solid 2px #fd9535;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+.user{
+  color: var(--White);
+  position: relative;
+  bottom: 120px;
+}
+.actitle{
+  position: relative;
+  bottom: 40px;
+}
+/*マイページの項目ここから*/
+.seiseki{
+  position: relative;
+  bottom: 110px;
+ 
+}
+.ssbtn{
+  line-height: 1.25;
+  text-decoration:none;
+  font-weight:bold;
+  background:#EC8C1F;
+  color:#fff !important;
+  border-radius:.5em;
+  padding:1em 4em;
+  text-align: center;
+  position: relative;
+  transition:.3s;
+}
+
+.ssbtn:after{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:.1em;
+  right:5%;
+  margin:auto;
+  width: .3em;
+  height: .3em;
+  border-top: .05em solid #fff;
+  border-right: .05em solid #fff;
+  transform: rotate(45deg);
+  transition:.3s;
+}
+a:hover{
+  opacity:.75;
+}
+.ssbtn:hover:after{
+  right:3%;
+}
+.quizhistory{
+  position: relative;
+  bottom: 60px;
+}
+.userrooms{
+  position: relative;
+  bottom: 10px;
+}
+.userdelete{
+  position: relative;
+  top: 40px;
+  color: red;
+}
+.scroll{
+  width: 260px;
+  position: relative;
+  left: 600px;
+  bottom: 110px;
+}
+select{
+  -webkit-appearance: none;/* ベンダープレフィックス(Google Chrome、Safari用) */
+  -moz-appearance: none; /* ベンダープレフィックス(Firefox用) */
+  appearance: none; /* 標準のスタイルを無効にする */
+  display: block; /* ブロックレベル要素化する */
+  width: 150px; /* ボックスの高さを指定する */
+  padding: 10px 15px; /* ボックス内側の余白を指定する */
+  border-radius: 5px; /* 角丸を指定する */
+  position: relative;
+  bottom: 30px;
+  right:  20px;
+}
+
+.txt{
+  position: relative;
+  right: 310px;
+  color:var(--White);
+  white-space: nowrap;
+}
+.txt2{
+  color: var(--White);
+  position: relative;
+  bottom: 80px;
+  right: 130px;
+}
+.radio{
+  position: relative;
+  bottom: 100px;
+  left: 30px;
+  color: white;
+}
+.txt3{
+  color: var(--White);
+  position: relative;
+  right: 130px;
+  bottom: 60px;
+}
+.txtbox{
+  position: relative;
+  left: 70px;
+  bottom: 110px;
+  white-space: pre-line;
+}
+textarea{
+  resize: none;
+}
+.henkobtn{
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color:var(--White);
+  background-color: black;
+  border: solid 2px black;
+  border-radius: 3px;
+  transition: .4s;
+  position: relative;
+  bottom: 60px;
+  right:  40px;
+  user-select: none;
+  cursor: pointer;
+}
+.henkobtn:hover{
+  background: black;
+}
+.go{
+ display: inline-block;
+ padding: 0.3em 1em;
+ text-decoration: none;
+ color: white;
+ background-color:var(--Go);
+ border: solid 2px black;
+ border-radius: 3px;
+ transition: .4s;
+ position: relative;
+ bottom: 97px;
+ left: 100px;
+ user-select: none;
+ cursor: pointer;
+}
+.back{
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color:var(--White);
+  background-color: black;
+  border: solid 2px black;
+  border-radius: 3px;
+  transition: .4s;
+  position: relative;
+  left: 30px;
+  bottom: 20px;
+  user-select: none;
+  cursor: pointer;
+}
+.back:hover{
+  background: black;
+}
